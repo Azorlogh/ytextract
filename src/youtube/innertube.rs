@@ -196,7 +196,7 @@ impl Api {
 
         let request = Request { video_id: id };
 
-        self.get("player", request, CONTEXT_ANDROID).await
+        self.get("player", request, CONTEXT_WEB).await
     }
 
     pub async fn next<T: serde::de::DeserializeOwned>(&self, next: Next) -> crate::Result<T> {
